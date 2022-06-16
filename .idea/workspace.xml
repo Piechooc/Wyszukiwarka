@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a29c2a4-6bd1-44af-9717-4a7b599a2dee" name="Default Changelist" comment="refractor">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8a29c2a4-6bd1-44af-9717-4a7b599a2dee" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finder-back/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/finder-back/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/finder-front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/finder-front/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/finder-front/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/finder-front/src/app/home/home.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +27,15 @@
     <option name="defaultAccountId" value="be27a6c5-e4f6-46b5-9697-99fab32fa294" />
   </component>
   <component name="ProjectId" id="2Aa2pIKOZw1vKVEgRG2rG6PSkU6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -68,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655234232891</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1655393810255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655393810255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -84,8 +96,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="frontend" />
     <MESSAGE value="refractor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractor" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
