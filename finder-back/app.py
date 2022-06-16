@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request
 from flask import Flask, Response, redirect
 from flask_cors import cross_origin, CORS
 
@@ -19,6 +19,10 @@ def page_not_found(e):
 @app.route('/getLinks', methods=["POST"])
 @cross_origin()
 def getData():
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        json = request.json
+        print(json['value'])
     with open('data.json', 'r') as f:
         content = f.read()
     return Response(content, status=200, mimetype="application/json")

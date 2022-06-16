@@ -1,3 +1,4 @@
+import { Article } from './article.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -10,7 +11,9 @@ export class EndpointService {
 
   constructor(private http: HttpClient) {}
 
-  public getLinksBySearch(value: string): Observable<any> {
-    return this.http.post(this.httpUrl + 'getLinks', value);
+  public getLinksBySearch(searchValue: string): Observable<Article[]> {
+    return this.http.post<Article[]>(this.httpUrl + 'getLink', {
+      value: searchValue,
+    });
   }
 }

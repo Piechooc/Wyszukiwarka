@@ -1,8 +1,34 @@
 <div class="home-container">
-  <input
-    placeholder="Wyszukiwarka"
-    id="name"
-    type="text"
-    [formControl]="search"
-  />
+  <form class="p-inputgroup" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+    <input
+      placeholder="Type here"
+      type="text"
+      pInputText
+      formControlName="value"
+    />
+    <span class="p-inputgroup-addon"
+      ><p-checkbox
+        label="Low rank approximation"
+        [binary]="true"
+        value="false"
+        [formControl]="convertToFormControl(form.controls['approx'])"
+        ><i class="pi pi-tags"></i></p-checkbox
+    ></span>
+    <button
+      [disabled]="!form.valid"
+      type="submit"
+      pButton
+      pRipple
+      label="Search"
+    ></button>
+  </form>
+  <div class="home-container-articles">
+    <ng-container *ngIf="articlesLoaded | async">
+      <span *ngFor="let article of articles">
+        {{ article.title }}
+        {{ article.link }}
+        {{ article.body }}
+      </span>
+    </ng-container>
+  </div>
 </div>
