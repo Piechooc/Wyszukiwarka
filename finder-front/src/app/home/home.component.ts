@@ -38,9 +38,9 @@ export class HomeComponent implements OnInit {
     return absCtrl as FormControl;
   }
 
-  onSubmit($event: any) {
+  onSubmit() {
     this.articlesLoaded.next(false);
-    this.endpointService.getLinksBySearch($event).subscribe({
+    this.endpointService.getLinksBySearch(this.form.value).subscribe({
       next: (response: Article[]) => {
         this.articles = response;
         this.articlesLoaded.next(true);

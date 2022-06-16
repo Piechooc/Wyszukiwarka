@@ -22,7 +22,7 @@ def getData():
     content_type = request.headers.get('Content-Type')
     if content_type == 'application/json':
         json = request.json
-        print(json['value'])
+        print(json)
     with open('data.json', 'r') as f:
         content = f.read()
     return Response(content, status=200, mimetype="application/json")
