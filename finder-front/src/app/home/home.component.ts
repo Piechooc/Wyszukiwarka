@@ -1,7 +1,9 @@
+import { Article } from './../servieces/article.interface';
 import { EndpointService } from './../servieces/endpoint.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime, of, switchMap } from 'rxjs';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -22,8 +24,10 @@ export class HomeComponent implements OnInit {
         )
       )
       .subscribe({
-        next: (value) => console.log('Response' + value),
-        error: (error) => console.log(error),
+        next: (response: Article[]) => {
+          console.log(response);
+        },
+        error: (error: HttpErrorResponse) => console.log(error.message),
       });
   }
 }

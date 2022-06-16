@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EndpointService {
-  public httpUrl = '';
+  public httpUrl = 'http://127.0.0.1:8080/';
 
   constructor(private http: HttpClient) {}
 
