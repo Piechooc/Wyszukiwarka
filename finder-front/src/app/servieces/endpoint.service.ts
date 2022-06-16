@@ -12,7 +12,7 @@ export class EndpointService {
   constructor(private http: HttpClient) {}
 
   public getLinksBySearch(searchValue: string): Observable<Article[]> {
-    return this.http.post<Article[]>(this.httpUrl + 'getLink', {
+    return this.http.post<Article[]>(this.httpUrl + 'getLinks', {
       value: searchValue,
     });
   }

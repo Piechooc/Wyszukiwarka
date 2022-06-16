@@ -24,10 +24,10 @@
   </form>
   <div class="home-container-articles">
     <ng-container *ngIf="articlesLoaded | async">
-      <span *ngFor="let article of articles">
-        {{ article.title }}
-        {{ article.link }}
-        {{ article.body }}
+      <span class="article" *ngFor="let article of articles">
+        <a [href]="article.link" class="article__a">{{ article.link }}</a>
+        <h2 class="article__h2">{{ article.title }}</h2>
+        <p class="article-description-container__p">{{ article.body }}</p>
       </span>
     </ng-container>
   </div>

@@ -1,3 +1,7 @@
+:host {
+    width: 100%;
+}
+
 .home-container {
     padding: 10px;
     display: flex;
@@ -9,6 +13,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     &-articles {
@@ -16,5 +21,41 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        .article {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            white-space: nowrap;
+            width: 80vw;
+            margin: 10px;
+            flex-wrap: nowrap;
+            align-content: center;
+
+            &__a {
+                margin: 10px 0 10px 0;
+                width: inherit;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: break-word;
+            }
+
+            &__h2 {
+                margin: 0;
+                width: inherit;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: break-word;
+            }
+
+            &-description-container__p {
+                width: inherit;
+                min-height: 50px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: break-word;
+            }
+        }
     }
 }
