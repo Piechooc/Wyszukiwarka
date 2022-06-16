@@ -1,5 +1,5 @@
-from flask import Flask, Response, request, flash, redirect, make_response, render_template
-from flask import Flask, Response, request, flash, redirect, send_from_directory, make_response
+from flask import render_template
+from flask import Flask, Response, redirect
 from flask_cors import cross_origin
 
 app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
@@ -15,10 +15,10 @@ def page_not_found(e):
     return redirect("/")
 
 
-@app.route('/getData', methods=["GET"])
+@app.route('/getLinks', methods=["GET"])
 @cross_origin()
 def getData():
-    with open('picture_mixer/servieces/data.json', 'r') as f:
+    with open('finder-back/data.json', 'r') as f:
         content = f.read()
     return Response(content, status=200, mimetype="application/json")
 
