@@ -2,7 +2,7 @@ from flask import render_template, request
 from flask import Flask, Response, redirect
 from flask_cors import cross_origin, CORS
 
-app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')
+app = Flask(__name__, static_url_path='', static_folder='static', template_folder='template')
 CORS(app)
 
 
