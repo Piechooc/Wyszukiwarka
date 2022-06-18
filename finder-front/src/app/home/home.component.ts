@@ -41,7 +41,6 @@ export class HomeComponent implements OnInit {
 
   onSubmit() {
     this.articlesLoaded.next(false);
-    console.log(this.form.value);
     this.endpointService.getLinksBySearch(this.form.value).subscribe({
       next: (response: Article[]) => {
         this.articles = response;

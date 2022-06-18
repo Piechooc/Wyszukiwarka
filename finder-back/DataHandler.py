@@ -6,6 +6,7 @@ import numpy as np
 import scipy.sparse as ss
 import scipy.sparse.linalg as ssl
 import pickle
+import os
 
 
 @dataclass
@@ -23,6 +24,14 @@ class DataHandler:
         self.bags_of_words = None
         self.terms = None
         self.tbd_matrix = None
+        self.create_folder()
+
+    @staticmethod
+    def create_folder():
+        try:
+            os.mkdir("./datasets")
+        except FileExistsError:
+            pass
 
     def create_dataset(self, dataset, articles_count, file_name, idf, low_rank, k):
         self.prepare_articles(dataset, articles_count)
@@ -103,6 +112,14 @@ class DataHandler:
     def do_low_rank_approximation(self, k):
         u, s, vt = ssl.svds(self.tbd_matrix, k=k)
         self.tbd_matrix = u @ s @ vt
+
+    def dump_data(self, file_name, file_type):
+        with open(f"./datasets/{file_type}_{file_name}", "wb") as file_type:
+            pickle.dump(self.articles, file_type)
+
+    def dump_load(self, file_name, file_type):
+        with open(f"./datasets/{file_type}_{file_name}", "rb") as file_type:
+            self.articles = pickle.load(file_type)
 
     def save_dataset(self, file_name):
         with open(f"./datasets/articles_{file_name}", "wb") as articles:

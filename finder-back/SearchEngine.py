@@ -29,7 +29,7 @@ class SearchEngine:
                 q[0, self.data_handler.terms[word]] += 1
 
         q = q.tocsr()
-        q_norm = np.linalg.norm(q)
+        q_norm = ssl.norm(q)
         q /= q_norm
 
         result = []
@@ -38,11 +38,11 @@ class SearchEngine:
             result.append((self.data_handler.tbd_matrix.getcol(i).dot(q[0]) /
                            ssl.norm(self.data_handler.tbd_matrix.getcol(i)))[0])
 
-        result = np.argsort(result)[-10:][::-1]
+        # result = np.argsort(result)[-10:][::-1]
 
-        for i in result:
-            print(self.data_handler.articles[i].title)
+        for g in result:
+            print(g)
 
 
-test = SearchEngine(2000, "2k")
-test.search("dog")
+test = SearchEngine(50, "50")
+test.search("april")
