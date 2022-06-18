@@ -42,6 +42,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Zibi\Desktop\Projekty\Wyszukiwarka\finder-back\static" />
+      <recent name="C:\Users\Zibi\Desktop\Projekty\Wyszukiwarka\finder-back\template" />
       <recent name="C:\Users\Zibi\Desktop\Projekty\Wyszukiwarka\finder-back" />
       <recent name="C:\Users\Zibi\Desktop\Projekty\Wyszukiwarka" />
     </key>
@@ -163,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655403567385</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="working bla bla bla">
+      <created>1655403693167</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1655403693167</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

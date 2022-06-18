@@ -8,6 +8,13 @@
     />
     <span class="p-inputgroup-addon"
       ><p-checkbox
+        label="IDF"
+        [binary]="true"
+        value="false"
+        [formControl]="convertToFormControl(form.controls['idf'])"
+        ><i class="pi pi-tags"></i
+      ></p-checkbox>
+      <p-checkbox
         label="Low rank approximation"
         [binary]="true"
         value="false"

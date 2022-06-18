@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
   private createForms(): void {
     this.form = this.formBuilder.group({
       value: ['', Validators.required],
+      idf: new FormControl(false),
       approx: new FormControl(false),
     });
   }
@@ -40,6 +41,7 @@ export class HomeComponent implements OnInit {
 
   onSubmit() {
     this.articlesLoaded.next(false);
+    console.log(this.form.value);
     this.endpointService.getLinksBySearch(this.form.value).subscribe({
       next: (response: Article[]) => {
         this.articles = response;
