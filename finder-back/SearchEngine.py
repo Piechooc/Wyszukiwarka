@@ -8,7 +8,7 @@ class SearchEngine:
     def __init__(self, data_size, name, idf=True, low_rank=False, k=0):
         self.name = name
         self.data_handler = DataHandler()
-        self.data_handler.create_dataset(data_size, self.name, idf, low_rank, k)
+        # self.data_handler.create_dataset(data_size, self.name, idf, low_rank, k)
 
     def search(self, query):
         self.data_handler.load(self.name)
@@ -41,4 +41,4 @@ class SearchEngine:
 
 
 test = SearchEngine(10000, "10k", idf=False)
-# test.search("april")
+test.search("april")
