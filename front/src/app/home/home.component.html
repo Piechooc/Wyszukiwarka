@@ -1,0 +1,41 @@
+<div class="home-container">
+  <form class="p-inputgroup" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input
+      placeholder="Type here"
+      type="text"
+      pInputText
+      formControlName="value"
+    />
+    <span class="p-inputgroup-addon"
+      ><p-checkbox
+        label="IDF"
+        [binary]="true"
+        value="false"
+        [formControl]="convertToFormControl(form.controls['idf'])"
+        ><i class="pi pi-tags"></i
+      ></p-checkbox>
+      <p-checkbox
+        label="Low rank approximation"
+        [binary]="true"
+        value="false"
+        [formControl]="convertToFormControl(form.controls['approx'])"
+        ><i class="pi pi-tags"></i></p-checkbox
+    ></span>
+    <button
+      [disabled]="!form.valid"
+      type="submit"
+      pButton
+      pRipple
+      label="Search"
+    ></button>
+  </form>
+  <div class="home-container-articles">
+    <ng-container *ngIf="articlesLoaded | async">
+      <span class="article" *ngFor="let article of articles">
+        <a [href]="article.link" class="article__a">{{ article.link }}</a>
+        <h2 class="article__h2">{{ article.title }}</h2>
+        <p class="article-description-container__p">{{ article.body }}</p>
+      </span>
+    </ng-container>
+  </div>
+</div>
