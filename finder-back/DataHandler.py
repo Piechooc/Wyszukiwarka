@@ -1,4 +1,5 @@
 import nltk
+from datasets import load_dataset
 import re
 from unidecode import unidecode
 from dataclasses import dataclass
@@ -18,6 +19,12 @@ class Article:
 
 class DataHandler:
     def __init__(self):
+        nltk.download('wordnet')
+        nltk.download('stopwords')
+        nltk.download('punkt')
+        nltk.download('omw-1.4')
+        dateset_dict = load_dataset("wikipedia", "20220301.simple")
+        self.dataset = dateset_dict['train']
         self.stop_words = set(nltk.corpus.stopwords.words('english'))
         self.stemmer = nltk.stem.porter.PorterStemmer()
         self.articles = None
@@ -33,8 +40,8 @@ class DataHandler:
         except FileExistsError:
             pass
 
-    def create_dataset(self, dataset, articles_count, file_name, idf, low_rank, k):
-        self.prepare_articles(dataset, articles_count)
+    def create_dataset(self, articles_count, file_name, idf, low_rank, k):
+        self.prepare_articles(articles_count)
         print("===================== articles, bags, terms done =============================")
         if idf:
             self.do_idf(articles_count)
@@ -56,7 +63,7 @@ class DataHandler:
 
         return prepared_texts
 
-    def prepare_articles(self, dataset, articles_count):
+    def prepare_articles(self, articles_count):
         self.articles = []
         self.bags_of_words = []
         self.terms = dict()
@@ -68,9 +75,9 @@ class DataHandler:
                 print(f"DONE {i}")
 
             words = dict()
-            self.articles.append(Article(title=dataset["title"][i],
-                                         link=dataset["url"][i], body=dataset["text"][i]))
-            prepared_body = self.prepare_text(dataset["title"][i]) + self.prepare_text(dataset["text"][i])
+            self.articles.append(Article(title=self.dataset["title"][i],
+                                         link=self.dataset["url"][i], body=self.dataset["text"][i]))
+            prepared_body = self.prepare_text(self.dataset["title"][i]) + self.prepare_text(self.dataset["text"][i])
             if i % 50 == 0:
                 print(prepared_body)
 
@@ -113,36 +120,26 @@ class DataHandler:
         u, s, vt = ssl.svds(self.tbd_matrix, k=k)
         self.tbd_matrix = u @ s @ vt
 
-    def dump_data(self, file_name, file_type):
+    @staticmethod
+    def pickle_dump(file_name, file_type, file):
         with open(f"./datasets/{file_type}_{file_name}", "wb") as file_type:
-            pickle.dump(self.articles, file_type)
+            pickle.dump(file, file_type)
 
-    def dump_load(self, file_name, file_type):
+    @staticmethod
+    def pickle_load(file_name, file_type):
         with open(f"./datasets/{file_type}_{file_name}", "rb") as file_type:
-            self.articles = pickle.load(file_type)
+            file = pickle.load(file_type)
+
+        return file
 
     def save_dataset(self, file_name):
-        with open(f"./datasets/articles_{file_name}", "wb") as articles:
-            pickle.dump(self.articles, articles)
+        self.pickle_dump(file_name, "articles", self.articles)
+        self.pickle_dump(file_name, "bags_of_words", self.bags_of_words)
+        self.pickle_dump(file_name, "terms", self.terms)
+        self.pickle_dump(file_name, "tbd_matrix", self.tbd_matrix)
 
-        with open(f"./datasets/bags_of_words_{file_name}", "wb") as bags_of_words:
-            pickle.dump(self.bags_of_words, bags_of_words)
-
-        with open(f"./datasets/terms_{file_name}", "wb") as terms:
-            pickle.dump(self.terms, terms)
-
-        with open(f"./datasets/tbd_matrix_{file_name}", "wb") as tbd_matrix:
-            pickle.dump(self.tbd_matrix, tbd_matrix)
-
-    def load_dataset(self, file_name):
-        with open(f"./datasets/articles_{file_name}", "rb") as articles:
-            self.articles = pickle.load(articles)
-
-        with open(f"./datasets/bags_of_words_{file_name}", "rb") as bags_of_words:
-            self.bags_of_words = pickle.load(bags_of_words)
-
-        with open(f"./datasets/terms_{file_name}", "rb") as terms:
-            self.terms = pickle.load(terms)
-
-        with open(f"./datasets/tbd_matrix_{file_name}", "rb") as tbd_matrix:
-            self.tbd_matrix = pickle.load(tbd_matrix)
+    def load(self, file_name):
+        self.articles = self.pickle_load(file_name, "articles")
+        self.bags_of_words = self.pickle_load(file_name, "bags_of_words")
+        self.terms = self.pickle_load(file_name, "terms")
+        self.tbd_matrix = self.pickle_load(file_name, "tbd_matrix")
