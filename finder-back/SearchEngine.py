@@ -1,5 +1,3 @@
-import nltk
-from datasets import load_dataset
 from DataHandler import DataHandler
 import numpy as np
 import scipy.sparse as ss
@@ -8,18 +6,12 @@ import scipy.sparse.linalg as ssl
 
 class SearchEngine:
     def __init__(self, data_size, name, idf=True, low_rank=False, k=0):
-        nltk.download('wordnet')
-        nltk.download('stopwords')
-        nltk.download('punkt')
-        nltk.download('omw-1.4')
-        dateset_dict = load_dataset("wikipedia", "20220301.simple")
         self.name = name
-        self.dataset = dateset_dict['train']
         self.data_handler = DataHandler()
-        self.data_handler.create_dataset(self.dataset, data_size, self.name, idf, low_rank, k)
+        self.data_handler.create_dataset(data_size, self.name, idf, low_rank, k)
 
     def search(self, query):
-        self.data_handler.load_dataset(self.name)
+        self.data_handler.load(self.name)
 
         words = self.data_handler.prepare_text(query)
 
@@ -32,17 +24,21 @@ class SearchEngine:
         q_norm = ssl.norm(q)
         q /= q_norm
 
-        result = []
+        temp = ss.find(q @ self.data_handler.tbd_matrix)
+        indexes = temp[1]
+        scores = temp[2]
+        result = [(scores[i], indexes[i]) for i in range(len(indexes))]
+        result.sort(reverse=True)
 
-        for i in range(len(self.data_handler.articles)):
-            result.append((self.data_handler.tbd_matrix.getcol(i).dot(q[0]) /
-                           ssl.norm(self.data_handler.tbd_matrix.getcol(i)))[0])
+        max_articles = 0
+        for i in result:
+            if max_articles == 10:
+                break
 
-        # result = np.argsort(result)[-10:][::-1]
+            max_articles += 1
 
-        for g in result:
-            print(g)
+        print(result)
 
 
-test = SearchEngine(50, "50")
-test.search("april")
+test = SearchEngine(10000, "10k", idf=False)
+# test.search("april")
