@@ -2,8 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5baf79f-2e4c-47eb-b251-25eea541e3ec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/back/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finder-back/SearchEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/finder-back/SearchEngine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/DataHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/DataHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/SearchEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/SearchEngine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/articles_10k" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/articles_10k" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/articles_10k_IDF" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/articles_10k_IDF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/articles_50" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/articles_50" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/bags_of_words_10k" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/bags_of_words_10k" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/bags_of_words_10k_IDF" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/bags_of_words_10k_IDF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/bags_of_words_50" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/bags_of_words_50" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/tbd_matrix_10k" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/tbd_matrix_10k" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/tbd_matrix_10k_IDF" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/tbd_matrix_10k_IDF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/tbd_matrix_50" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/tbd_matrix_50" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/terms_10k" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/terms_10k" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/terms_10k_IDF" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/terms_10k_IDF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/datasets/terms_50" beforeDir="false" afterPath="$PROJECT_DIR$/back/datasets/terms_50" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/color.dae87a04d07ca92b.png" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/color.dae87a04d07ca92b.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/hue.8b1818380241e6ac.png" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/hue.8b1818380241e6ac.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/main.479a4a189873b6f3.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/main.479a4a189873b6f3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/polyfills.3c311c4204476f72.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/polyfills.3c311c4204476f72.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/primeicons.29151a741d66863a.woff" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/primeicons.29151a741d66863a.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/primeicons.5f5d08cd089b4e5d.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/primeicons.5f5d08cd089b4e5d.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/primeicons.76044b1c189cc4d7.svg" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/primeicons.76044b1c189cc4d7.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/primeicons.964f445f3ea9db80.eot" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/primeicons.964f445f3ea9db80.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/runtime.a8f5473081ac176d.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/runtime.a8f5473081ac176d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/static/styles.9ef6775bd4ba65e5.css" beforeDir="false" afterPath="$PROJECT_DIR$/back/static/styles.9ef6775bd4ba65e5.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-back/template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/back/template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/front/.browserslistrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/front/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/front/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/karma.conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/main-nav/main-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/main-nav/main-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/main-nav/main-nav.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/main-nav/main-nav.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/main-nav/main-nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/main-nav/main-nav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/servieces/article.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/servieces/article.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/servieces/endpoint.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/servieces/endpoint.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/app/servieces/finderValue.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/servieces/finderValue.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/assets/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/polyfills.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finder-front/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/tsconfig.spec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +105,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.app (1)">
     <configuration name="SearchEngine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Wyszukiwarka" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,8 +128,54 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Wyszukiwarka" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/back" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/back/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Wyszukiwarka" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finder-back" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finder-back/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.SearchEngine" />
       </list>
     </recent_temporary>
@@ -80,6 +190,8 @@
       <updated>1655581587654</updated>
       <workItem from="1655581591701" duration="5808000" />
       <workItem from="1655599857436" duration="2490000" />
+      <workItem from="1655651292748" duration="1155000" />
+      <workItem from="1655653733363" duration="2210000" />
     </task>
     <servers />
   </component>
@@ -87,6 +199,8 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Wyszukiwarka$SearchEngine.coverage" NAME="SearchEngine Coverage Results" MODIFIED="1655644670884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finder-back" />
+    <SUITE FILE_PATH="coverage/Wyszukiwarka$SearchEngine.coverage" NAME="SearchEngine Coverage Results" MODIFIED="1655651845024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finder-back" />
+    <SUITE FILE_PATH="coverage/Wyszukiwarka$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1655655985285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/back" />
+    <SUITE FILE_PATH="coverage/Wyszukiwarka$app.coverage" NAME="app Coverage Results" MODIFIED="1655654358988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finder-back" />
   </component>
 </project>

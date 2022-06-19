@@ -42,17 +42,21 @@ class DataHandler:
 
     def create_dataset(self, articles_count, file_name, idf, low_rank, k):
         self.prepare_articles(articles_count)
-        print("===================== articles, bags, terms done =============================")
         if idf:
             self.do_idf(articles_count)
-            print("=========================== idf done =================================")
         self.do_matrix()
-        print("================================= matrix done ====================================")
         if low_rank:
             self.do_low_rank_approximation(k)
-            print("=============================== low rank done ==============================")
         self.save_dataset(file_name)
-        print("========================= DONE =========================")
+
+    def create_low_rank_dataset(self, articles_count, idf, k):
+        self.articles = self.pickle_load("10k", "articles")
+        self.bags_of_words = self.pickle_load("10k", "bags_of_words")
+        self.terms = self.pickle_load("10k", "terms")
+        if idf:
+            self.do_idf(articles_count)
+        self.do_matrix()
+        self.do_low_rank_approximation(k)
 
     def prepare_text(self, text):
         text = re.sub(r'[^\w\s]', '', unidecode(text))
@@ -118,7 +122,7 @@ class DataHandler:
 
     def do_low_rank_approximation(self, k):
         u, s, vt = ssl.svds(self.tbd_matrix, k=k)
-        self.tbd_matrix = u @ s @ vt
+        self.tbd_matrix = u * s @ vt
 
     @staticmethod
     def pickle_dump(file_name, file_type, file):
